@@ -1,0 +1,22 @@
+$desktop: 768;
+
+$break-points-map: (
+  desktop: $desktop,
+);
+
+@function getBreakpoint($key) {
+  @return map-get($break-points-map, $key);
+}
+
+@mixin breakpoint($width) {
+  @if type-of($width) == number {
+    @media only screen and (min-width: $width*1px) {
+      @content;
+    }
+  } @else {
+    $break: getBreakpoint($width);
+    @media only screen and (min-width: $break*1px) {
+      @content;
+    }
+  }
+}

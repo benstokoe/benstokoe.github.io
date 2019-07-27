@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should render properly for input 1`] = `
+<div
+  className="input__container"
+>
+  <input
+    className="input"
+    disabled={false}
+    type="text"
+  />
+</div>
+`;
+
+exports[`Input should render properly for textarea 1`] = `
+<div
+  className="input__container"
+>
+  <textarea
+    className="input"
+    disabled={false}
+    type="text"
+  />
+</div>
+`;
+
+exports[`Input should render properly with error 1`] = `
+<div
+  className="input__container"
+>
+  <input
+    className="input input--error"
+    disabled={false}
+    type="text"
+  />
+  <span
+    className="input__error"
+  >
+    <Component />
+  </span>
+</div>
+`;
+
+exports[`Input should render properly with no props 1`] = `
+<div
+  className="input__container"
+>
+  <input
+    className="input"
+    type="text"
+  />
+</div>
+`;

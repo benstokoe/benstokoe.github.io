@@ -1,0 +1,18 @@
+@import '../../scss/spacing';
+@import '../../scss/breakpoints';
+@import '../../scss/colours';
+
+.contact-form {
+  &__submit {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    background-color: $dark;
+    color: white;
+    padding: spacing(2) 0;
+
+    @include breakpoint($desktop) {
+      margin: 0;
+    }
+  }
+}
