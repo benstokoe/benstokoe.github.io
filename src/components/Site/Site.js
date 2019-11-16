@@ -5,7 +5,8 @@ import Container from '../Container';
 import fluidImage from '../../../propTypes/fluidImage';
 import './site.scss';
 
-const Site = ({ frontmatter: { title, image, skills }, html }) => (
+// <div dangerouslySetInnerHTML={{ __html: html }} />
+const Site = ({ frontmatter: { title, image, skills, url }, html }) => (
   <div className="site">
     <Container>
       <div className="site__container">
@@ -14,12 +15,18 @@ const Site = ({ frontmatter: { title, image, skills }, html }) => (
         </div>
         <div className="site__info">
           <h2>{title}</h2>
-          <div dangerouslySetInnerHTML={{ __html: html }} />
           {skills && skills.length ? (
             <div className="site__technology">
               <h5>Technology used:</h5>
               <p>{skills.join(', ')}</p>
             </div>
+          ) : (
+            ''
+          )}
+          {url ? (
+            <a className="site__visit" href={url} target="__blank">
+              Visit site
+            </a>
           ) : (
             ''
           )}
@@ -34,6 +41,7 @@ Site.propTypes = {
     title: PropTypes.string,
     image: fluidImage,
     skills: PropTypes.arrayOf(PropTypes.string),
+    url: PropTypes.string,
   }),
   html: PropTypes.string,
 };
@@ -41,6 +49,7 @@ Site.propTypes = {
 Site.defaultProps = {
   frontmatter: {
     skills: [],
+    url: '',
   },
   html: '',
 };

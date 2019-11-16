@@ -12,6 +12,11 @@
   &:nth-child(2n + 1) {
     color: $white;
     background-color: $dark;
+
+    #{$root}__visit {
+      color: $font;
+      background-color: $white;
+    }
   }
 
   &:nth-child(2n) {
@@ -54,6 +59,20 @@
 
     p {
       margin-bottom: 0;
+    }
+  }
+
+  &__visit {
+    display: block;
+    background-color: $dark;
+    color: $white;
+    text-decoration: none;
+    padding: spacing();
+    margin-top: spacing(2);
+    text-align: center;
+
+    @include breakpoint($desktop) {
+      max-width: 50%;
     }
   }
 }

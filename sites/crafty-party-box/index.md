@@ -3,6 +3,7 @@ date: '2019-05-04'
 title: 'Crafty Party Box'
 image: './craftypartybox.png'
 skills: ['Shopify', 'Liquid', 'SCSS']
+url: 'https://craftypartybox.co.uk'
 ---
 
 Crafty Party Box is a business selling craft boxes to children. I extended the Shopify theme used

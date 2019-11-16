@@ -12,6 +12,10 @@ const SiteList = ({
     {edges.map(({ node: { id, frontmatter, html } }) => (
       <Site key={id} frontmatter={frontmatter} html={html} />
     ))}
+
+    <p className="site__note">
+      Please note that site designs may differ from the screenshots.
+    </p>
   </div>
 );
 
@@ -39,6 +43,7 @@ export default props => (
                   }
                 }
                 skills
+                url
               }
               html
             }

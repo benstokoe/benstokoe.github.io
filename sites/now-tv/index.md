@@ -1,7 +1,7 @@
 ---
 date: '2017-09-04'
 title: 'NOW TV'
-image: './placeholder.png'
+image: './nowtv.png'
+skills: ['React', 'Redux', 'Alt', 'Jest', 'SCSS']
+url: 'https://www.nowtv.com'
 ---
-
-Hello!
